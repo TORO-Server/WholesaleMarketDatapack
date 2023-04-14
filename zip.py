@@ -2,7 +2,6 @@ import os
 import logging
 import zipfile
 import hashlib
-from time import sleep
 
 # -----設定部分-----start
 
