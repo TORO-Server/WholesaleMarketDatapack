@@ -4,19 +4,19 @@ import zipfile
 import hashlib
 from time import sleep
 
-#-----設定部分-----start
+# -----設定部分-----start
 
 FORMAT = '%(asctime)s [%(levelname)s]:%(message)s'
 FILE_NAME = 'WholesaleMarket.zip'
 ALLOW_LIST = ["pack.mcmeta", "pack.png", "LICENSE", "README.md"]
 DIRECTORY = "data"
 
-#-----設定部分-----end
-
+# -----設定部分-----end
 
 
 logging.basicConfig(format=FORMAT, level=logging.DEBUG)
 logging.info("実行開始")
+
 
 def write(ziph, root, file):
     ziph.write(os.path.join(root, file))
@@ -47,10 +47,8 @@ logging.info("ファイルの場所:\n" + os.path.abspath(FILE_NAME))
 
 
 with open(FILE_NAME, 'rb') as file:
-    logging.info('sha1:  ' +  hashlib.sha1(file.read()).hexdigest())
+    logging.info('sha1:  ' + hashlib.sha1(file.read()).hexdigest())
 
-logging.info("10秒後にこの画面を閉じます")
-
-sleep(10)
+input("Enterキーで、この画面を閉じます")
 
 logging.info("プログラムを終了します")
