@@ -1,4 +1,4 @@
-# wholesale_market
+# WholesaleMarketDatapack
 
 業務スーパーが自然生成されるようにするデータパック
 
